@@ -14,8 +14,9 @@
 }
 
 body {
-    font-family: Segoe UI, Arial, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
     background-color: #F5F1E8;
+    color: #333;
 }
 
 /* Navigation */
@@ -23,14 +24,17 @@ body {
 nav {
     background-color: #6B4F3A;
     padding: 15px;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 10px;
     font-weight: bold;
+    padding: 6px 10px;
 }
 
 nav a:hover {
@@ -40,8 +44,7 @@ nav a:hover {
 /* Hero */
 
 .hero {
-    height: 90vh;
-
+    min-height: 90vh;
     background:
         linear-gradient(
             rgba(60,40,20,.45),
@@ -51,27 +54,29 @@ nav a:hover {
 
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 
     display: flex;
     justify-content: center;
     align-items: center;
-
     text-align: center;
     color: white;
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 850px;
     padding: 20px;
 }
 
 .hero h1 {
     font-size: 5rem;
     margin-bottom: 20px;
+    letter-spacing: 2px;
 }
 
 .hero p {
     font-size: 1.4rem;
+    line-height: 1.5;
 }
 
 /* Welcome */
@@ -86,6 +91,12 @@ nav a:hover {
 .welcome h2 {
     margin-bottom: 20px;
     color: #6B4F3A;
+    font-size: 2rem;
+}
+
+.welcome p {
+    font-size: 1.1rem;
+    line-height: 1.7;
 }
 
 /* Footer */
@@ -95,6 +106,56 @@ footer {
     color: white;
     text-align: center;
     padding: 25px;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+}
+
+/* Mobile & Tablet */
+
+@media (max-width: 768px) {
+
+    nav {
+        gap: 6px;
+        padding: 12px;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 4px 8px;
+    }
+
+    .hero {
+        min-height: 70vh;
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        line-height: 1.1;
+        margin-bottom: 15px;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .welcome {
+        padding: 40px 15px;
+    }
+
+    .welcome h2 {
+        font-size: 1.7rem;
+    }
+
+    .welcome p {
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 20px 15px;
+    }
 }
 
 </style>
@@ -107,52 +168,4 @@ footer {
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="mission.html">Mission</a>
-    <a href="programs.html">Programs</a>
-    <a href="resources.html">Resources</a>
-    <a href="volunteer.html">Volunteer</a>
-    <a href="partners.html">Partners</a>
-    <a href="cityhall.html">City Hall</a>
-    <a href="contact.html">Contact</a>
-</nav>
-
-<div class="hero">
-
-    <div class="hero-content">
-
-        <h1>NO JUDGEMENT</h1>
-
-        <p>
-            Building stronger communities through support,
-            understanding, recovery, opportunity and hope.
-        </p>
-
-    </div>
-
-</div>
-
-<section class="welcome">
-
-    <h2>Welcome to No Judgement</h2>
-
-    <p>
-        No Judgement is a community-driven organization
-        focused on connecting people with support,
-        resources, opportunities and meaningful
-        relationships.
-    </p>
-
-</section>
-
-<footer>
-
-    <h3>NO JUDGEMENT</h3>
-
-    <p>
-        Building Stronger Communities Through Support,
-        Opportunity and Hope
-    </p>
-
-</footer>
-
-</body>
-</html>
+    <a 
